@@ -1,11 +1,11 @@
 package _03_04.before;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class LinkedHashmapExample {
 
     public static void main(String[] args) {
-        HashMap<String, Integer> basket = new HashMap<>();
+        LinkedHashMap<String, Integer> basket = new LinkedHashMap<>(10,0.75f,false);
 
         basket.put("apple", 2);
         basket.put("orange", 1);
@@ -13,5 +13,7 @@ public class LinkedHashmapExample {
 
         basket.forEach((key, value) -> System.out.println(key + ": " + value));
 
+        basket.get("apple");
+        basket.forEach((key, value) -> System.out.println(key + ": " + value));
     }
 }
