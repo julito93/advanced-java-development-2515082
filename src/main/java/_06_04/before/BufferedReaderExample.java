@@ -7,8 +7,7 @@ import java.io.IOException;
 public class BufferedReaderExample {
 
     public static void main(String[] args) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("src/main/java/_06_03/example.txt"));
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/java/_06_03/example.txt"))){
             System.out.println("First line:");
             String firstLine = reader.readLine();
             System.out.println(firstLine);
